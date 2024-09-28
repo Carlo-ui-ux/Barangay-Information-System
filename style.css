@@ -1,0 +1,462 @@
+body{
+    margin: 0;
+}
+body, h1, h2, p {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+nav{
+    background-color: rgb(30, 30, 30);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+}
+.link.active {
+    color: gold;
+    font-weight: bold;
+    border-bottom: 2px solid gold;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.brand-container{
+    display: inline-block;
+}
+.brand-title{
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-family: Verdana;
+    position: relative;
+    top: -50px;
+    left: 15px;
+}
+.link-container{
+    float: right;
+    position: relative;
+    top: 45px;
+    font-size: 20px;
+}
+.link{
+    color: white;
+    text-decoration: none;
+    font-family: Verdana;
+    margin: 0px 15px;
+}
+.link:hover{
+    color: gold;
+    transition: 0.2s;
+}
+.btn-link{
+    background-color: gold;
+    padding: 10px 25px;
+    font-family: Verdana;
+    text-decoration: none;
+    border-radius: 25px;
+    color: white;
+    transition: 0.2s;
+}
+.btn-link:hover {
+    padding: 10px 25px; /* Same as normal state */
+    background-color: darkgoldenrod; /* Optional: Change background color on hover */
+}
+
+h1{
+    text-align: center;
+    font-family: verdana;
+    font-size: 50px;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-gap: 20px; /* Spacing between columns */
+    padding: 20px;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column; /* Stack "Barangay Projects" text and image vertically */
+    justify-content: center; /* Center the content vertically */
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+p {
+    font-family: Verdana;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr; /* Stack both columns on top of each other */
+    }
+
+    .left-content, .right-content {
+        justify-content: flex-start; /* Align content to the top */
+    }
+}
+
+
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+}
+
+.hamburger-menu span {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu on small screens */
+    }
+
+    .link-container {
+        display: none; /* Initially hide navigation links */
+        flex-direction: column;
+        background-color: rgb(30, 30, 30);
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        right: 0;
+        width: 100%;
+    }
+
+    .link-container a {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+
+    .link-container.active {
+        display: flex;
+    }
+}
+.history-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-gap: 20px; /* Spacing between text and image */
+    padding: 20px;
+    background-color: #f9f9f9; /* Optional: light background color */
+    margin: 20px 0; /* Adds space around the section */
+}
+
+.left-history-content {
+    display: flex;
+    flex-direction: column; /* Stack heading and paragraph vertically */
+    justify-content: center; /* Center content vertically */
+}
+
+.history-title {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.history-description {
+    font-family: Verdana;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+.right-history-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.history-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .history-section {
+        grid-template-columns: 1fr; /* Stack content on small screens */
+    }
+
+    .left-history-content, .right-history-image {
+        justify-content: flex-start; /* Align content to the top */
+    }
+}
+
+.programs-events-section {
+    padding: 20px;
+    background-color: #f2f2f2; /* Optional: light background for contrast */
+    margin: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.programs-events-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-gap: 20px; /* Space between the images */
+    justify-items: center; /* Center images horizontally */
+    align-items: start; /* Align titles and images */
+}
+
+.program, .event, .tourist-spot {
+    text-align: center; /* Center the text and image in each grid item */
+}
+
+.program-img, .event-img, .tourist-img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+.img-title {
+    font-size: 18px;
+    margin-top: 10px;
+    font-family: Verdana;
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 768px) {
+    .programs-events-container {
+        grid-template-columns: 1fr; /* Stack each item vertically */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .programs-events-container {
+        grid-template-columns: 1fr 1fr; /* Display two items per row on medium screens */
+    }
+}
+
+.sk-program-section {
+    padding: 20px;
+    background-color: #e9f5f8; /* Optional: light background to distinguish the section */
+    margin: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.sk-program-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two-column layout: text on the left, image on the right */
+    grid-gap: 20px; /* Spacing between the text and image */
+}
+
+.sk-left-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sk-program-title {
+    font-size: 22px;
+    margin: 10px 0;
+    font-family: Verdana;
+}
+
+.sk-program-description {
+    font-family: Verdana;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 10px 0;
+}
+
+.sk-right-image {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.sk-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+/* Responsive Design: Stack columns on smaller screens */
+@media (max-width: 768px) {
+    .sk-program-container {
+        grid-template-columns: 1fr; /* Stack the content on smaller screens */
+    }
+}
+/*--Chart--*/
+.officials-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin: 20px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Organization Chart */
+.organization-chart {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for overall layout */
+    grid-template-rows: auto auto auto; /* Auto rows */
+    gap: 40px 20px; /* 40px vertical gap, 20px horizontal gap */
+    justify-items: center;
+}
+
+/* Barangay Captain (Top Center) */
+.barangay-captain {
+    grid-column: 4 / 5; /* Center Barangay Captain in the 4th column */
+    text-align: center;
+}
+
+/* 1st row of SB members (3 members centered) */
+.sb-member:nth-of-type(2) {
+    grid-column: 2 / 3; /* SB Member 1 */
+}
+.sb-member:nth-of-type(3) {
+    grid-column: 4 / 5; /* SB Member 2 */
+}
+.sb-member:nth-of-type(4) {
+    grid-column: 6 / 7; /* SB Member 3 */
+}
+
+/* 2nd row of SB members (4 members spread evenly) */
+.sb-member:nth-of-type(5) {
+    grid-column: 1 / 2; /* SB Member 4 */
+}
+.sb-member:nth-of-type(6) {
+    grid-column: 3 / 4; /* SB Member 5 */
+}
+.sb-member:nth-of-type(7) {
+    grid-column: 5 / 6; /* SB Member 6 */
+}
+.sb-member:nth-of-type(8) {
+    grid-column: 7 / 8; /* SB Member 7 */
+}
+
+/* Styling for official images and text */
+.official-img {
+    border-radius: 15px;
+    width: 200px;
+    height: 250px;
+}
+
+.official-title {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.official-name {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .organization-chart {
+        grid-template-columns: repeat(4, 1fr); /* Fewer columns on small screens */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    .official-img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.contact-about-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 columns: contact, about, and transparency seal */
+    gap: 20px; /* Spacing between columns */
+    padding: 20px;
+}
+
+.contact-us, .about-us, .transparency-seal {
+    background-color: #f1f1f1; /* Light background for each section */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.contact-us h2, .about-us h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.seal-image {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    width: 150px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-about-section {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .seal-image {
+        width: 100px; /* Smaller image on mobile */
+    }
+}
+
+footer {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
